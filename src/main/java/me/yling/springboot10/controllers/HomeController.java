@@ -17,9 +17,9 @@ public class HomeController
     CourseRepository courseRepository;
 
     @RequestMapping("/")
-    public String listCourse(Model model)
+    public String listCourses(Model model)
     {
-        model.addAttribute("course", courseRepository.findAll());
+        model.addAttribute("courses", courseRepository.findAll());
         return "list";
     }
 
